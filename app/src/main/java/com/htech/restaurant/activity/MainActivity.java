@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.htech.restaurant.fragment.FragmentButton;
+import com.htech.restaurant.fragment.SelectTableFragment;
 import com.htech.restaurant.fragment.FragmentIndex;
 import com.htech.restaurant.R;
 
@@ -25,14 +25,14 @@ public class MainActivity extends MaterialNavigationDrawer {
 
 
         // create sections
-        this.addSection(newSection("Section 1", new FragmentIndex()));
-        this.addSection(newSection("Section 2",new FragmentIndex()));
-        this.addSection(newSection("Section 3",R.drawable.ic_mic_white_24dp,new FragmentButton()).setSectionColor(Color.parseColor("#9c27b0")));
-        this.addSection(newSection("Section", R.drawable.ic_hotel_grey600_24dp, new FragmentButton()).setSectionColor(Color.parseColor("#03a9f4")));
-
+        this.addSection(newSection("Select Table", new SelectTableFragment()));
+        this.addSection(newSection("Section 2", new FragmentIndex()));
+        this.addSection(newSection("Section 3",R.drawable.ic_mic_white_24dp,new SelectTableFragment()).setSectionColor(Color.parseColor("#9c27b0")));
+        this.addSection(newSection("Section", R.drawable.ic_hotel_grey600_24dp, new SelectTableFragment()).setSectionColor(Color.parseColor("#03a9f4")));
 
         // create bottom section
         this.addBottomSection(newSection("Bottom Section", R.drawable.ic_settings_black_24dp, new Intent(this, Settings.class)));
+
     }
 
     @Override
@@ -63,4 +63,22 @@ public class MainActivity extends MaterialNavigationDrawer {
         return super.onOptionsItemSelected(item);
     }
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+        // set the indicator for child fragments
+        // N.B. call this method AFTER the init() to leave the time to instantiate the ActionBarDrawerToggle
+        this.setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_24dp);
+    }
+
+
+    @Override
+    public void onHomeAsUpSelected() {
+        // when the back arrow is selected this method is called
+
+
+    }
 }
