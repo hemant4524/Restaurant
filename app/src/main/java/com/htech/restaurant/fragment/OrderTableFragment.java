@@ -26,13 +26,25 @@ public class OrderTableFragment extends Fragment {
     CharSequence Titles[]={"FAVORITES","CATEGORIES","ORDER"};
     int Numboftabs =3;
     private SlidingTabLayout tabs;
+    private String TAG = OrderTableFragment.class.getSimpleName();
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_ordertable, container, false);
+        return inflater.inflate(R.layout.fragment_ordertable, container, false);
 
+
+
+    }
+
+    public void setTableIndex(int tableIndex) {
+
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new ViewPagerAdapter(getActivity().getSupportFragmentManager(),Titles,Numboftabs);
 
@@ -52,14 +64,15 @@ public class OrderTableFragment extends Fragment {
             }
         });
 
+        pager.setCurrentItem(1);
         // Setting the ViewPager For the SlidingTabsLayout
         tabs.setViewPager(pager);
 
-        return  view;
-
     }
 
-    public void setTableIndex(int tableIndex) {
 
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

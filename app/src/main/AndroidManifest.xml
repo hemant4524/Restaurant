@@ -19,9 +19,18 @@
         <activity android:name=".activity.Settings" />
         <activity
             android:name=".activity.MainActivity"
-            android:label="@string/title_activity_login" >
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/ThemeDetail" />
+        <activity
+            android:name=".activity.MenuDetailActivity"
+            android:theme="@style/ThemeDetail" />
+        <activity
+            android:name=".activity.RemarkActivity"
+            android:label="@string/title_activity_remark"
+            android:theme="@style/AppDialogTheme">
         </activity>
-        <activity android:name=".activity.LoginActivity"></activity>
     </application>
 
 </manifest>

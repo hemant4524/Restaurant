@@ -21,7 +21,6 @@ public class MainActivity extends MaterialNavigationDrawer {
         setUserEmail("My version build");
         //setFirstAccountPhoto(getResources().getDrawable(R.drawable.photo));
 
-
         // create sections
         this.addSection(newSection("Select Table", new SelectTableFragment()));
         this.addSection(newSection("Section 2", new FragmentIndex()));
@@ -30,7 +29,8 @@ public class MainActivity extends MaterialNavigationDrawer {
 
         // create bottom section
         this.addBottomSection(newSection("Bottom Section", R.drawable.ic_settings_black_24dp, new Intent(this, Settings.class)));
-
+        // add pattern
+       // this.setBackPattern(MaterialNavigationDrawer.BACKPATTERN_BACK_TO_FIRST);
     }
 
     @Override
@@ -53,7 +53,5 @@ public class MainActivity extends MaterialNavigationDrawer {
     @Override
     public void onHomeAsUpSelected() {
         // when the back arrow is selected this method is called
-
-
     }
 }

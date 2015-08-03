@@ -9,4 +9,6 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <string name="text_dismiss">Dismiss</string>
+    <string name="title_activity_menu_detail">MenuDetailActivity</string>
+    <string name="title_activity_remark">RemarkActivity</string>
 </resources>

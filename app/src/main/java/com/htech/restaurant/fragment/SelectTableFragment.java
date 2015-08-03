@@ -63,9 +63,9 @@ public class SelectTableFragment extends Fragment implements TableAdapter.OnItem
     @Override
     public void onItemClickListener(int position) {
         int table_number = (position+1);
-        OrderTableFragment tableOrder = new OrderTableFragment();
-        tableOrder.setTableIndex(table_number);
+        OrderTableFragment ordertable = new OrderTableFragment();
+        ordertable.setTableIndex(table_number);
         //((MaterialNavigationDrawer)this.getActivity()).setFragmentChild(tableOrder, "order_table_fragment");
-        ((MaterialNavigationDrawer)this.getActivity()).setFragmentChild(tableOrder, "Order for Table " + table_number);
+        ((MaterialNavigationDrawer)this.getActivity()).setFragmentChild(ordertable, "Order for Table " + table_number);
     }
 }
