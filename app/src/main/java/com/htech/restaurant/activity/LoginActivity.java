@@ -7,12 +7,10 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 
 import com.htech.restaurant.R;
 
 public class LoginActivity extends AppCompatActivity {
-    private RelativeLayout mRoot;
     private EditText mInputEmail;
     private EditText mInputPassword;
     private Button mbtnLogin;
@@ -22,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-        mRoot = (RelativeLayout) findViewById(R.id.root_activity_second);
         mInputEmail = (EditText) findViewById(R.id.input_email);
         mInputPassword = (EditText) findViewById(R.id.input_password);
         mbtnLogin = (Button) findViewById(R.id.activity_login_btnLogin);
@@ -53,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 //            startActivity(new Intent(LoginActivity.this, MainActivity.class));
 //        }
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        finish();
     }
 
     private boolean isEmptyEmail() {

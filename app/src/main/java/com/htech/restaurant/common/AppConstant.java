@@ -6,4 +6,8 @@ package com.htech.restaurant.common;
 public class AppConstant {
 
     public static final boolean ISDEBUG = true;
+    public static int DB_VERSION = 1;
+    // Database File Configuration
+    public static String DB_PATH = "/data/data/com.htech.restaurant/databases/";
+    public static String DB_NAME = "restaurant.sqlite";
 }

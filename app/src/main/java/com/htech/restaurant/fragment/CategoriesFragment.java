@@ -10,13 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.htech.restaurant.MyApplication;
 import com.htech.restaurant.R;
 import com.htech.restaurant.activity.MenuDetailActivity;
 import com.htech.restaurant.adapter.CategoryAdapter;
-import com.htech.restaurant.vos.Category;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class CategoriesFragment extends Fragment implements CategoryAdapter.OnItemClickListener {
 
@@ -49,16 +46,16 @@ public class CategoriesFragment extends Fragment implements CategoryAdapter.OnIt
      * Fetch table list
      */
     private void getMainMenu() {
-        List<Category> categories = new ArrayList<Category>();
-
-        for (int i = 0; i < 12; i++) {
-            int id = (i + 1);
-            Category category = new Category();
-            category.setId(id);
-            category.setCatName("" + id);
-            categories.add(category);
-        }
-        mAdapter = new CategoryAdapter(getActivity(), categories, this);
+//        List<MainMenu> categories = new ArrayList<MainMenu>();
+//
+//        for (int i = 0; i < 12; i++) {
+//            int id = (i + 1);
+//            MainMenu category = new MainMenu();
+//            category.setId(id);
+//            category.setCatName("" + id);
+//            categories.add(category);
+//        }
+        mAdapter = new CategoryAdapter(getActivity(), MyApplication.MAINMENU, this);
         mRecyclerView.setAdapter(mAdapter);
     }
 

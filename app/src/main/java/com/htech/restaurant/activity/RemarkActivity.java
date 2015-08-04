@@ -1,18 +1,29 @@
 package com.htech.restaurant.activity;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.htech.restaurant.R;
 
 public class RemarkActivity extends ActionBarActivity {
 
+    private Button mbtnDone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_remark);
+        mbtnDone = (Button) findViewById(R.id.activity_remark_btnDone);
+        mbtnDone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                finish();
+            }
+        });
     }
 
     @Override

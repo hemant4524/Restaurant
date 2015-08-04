@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.htech.restaurant.R;
 import com.htech.restaurant.activity.RemarkActivity;
-import com.htech.restaurant.vos.SubCategory;
+import com.htech.restaurant.vos.SubMenu;
 
 import java.util.List;
 
@@ -20,13 +20,13 @@ import java.util.List;
  * Created by software on 7/29/15.
  */
 public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.TableViewHolder> {
-    private List<SubCategory> mCategories;
+    private List<SubMenu> mCategories;
     private Context mContext;
     private String TAG = SubCategoryAdapter.class.getSimpleName();
 
     OnItemClickListener onItemClickListener;
 
-    public SubCategoryAdapter(Context pContext, List<SubCategory> pCategories, OnItemClickListener pOnItemClickListener) {
+    public SubCategoryAdapter(Context pContext, List<SubMenu> pCategories, OnItemClickListener pOnItemClickListener) {
         mContext = pContext;
         mCategories = pCategories;
         onItemClickListener = pOnItemClickListener;
@@ -42,7 +42,7 @@ public class SubCategoryAdapter extends RecyclerView.Adapter<SubCategoryAdapter.
 
     @Override
     public void onBindViewHolder(final TableViewHolder tableViewHolder, final int i) {
-        SubCategory category = mCategories.get(i);
+        SubMenu category = mCategories.get(i);
         Log.d(TAG, "category name" + category.getSubCatName());
         tableViewHolder.textView.setText(category.getSubCatName());
 

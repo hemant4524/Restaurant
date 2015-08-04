@@ -60,4 +60,11 @@
         <item name="windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <string name="lbl_username">Username</string>
+    <string name="lbl_passwd">Password</string>
+    <string name="lbl__forgot_passwd">Forgot password ?</string>
+    <string name="lbl_login">Log In</string>
+    <string name="lbl_singup">SIGN UP</string>
+    <string name="lbl_guest_user">GUEST USER</string>
 </resources>

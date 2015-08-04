@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.htech.restaurant.R;
-import com.htech.restaurant.vos.Category;
+import com.htech.restaurant.vos.MainMenu;
 
 import java.util.List;
 
@@ -18,13 +18,13 @@ import java.util.List;
  * Created by software on 7/29/15.
  */
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.TableViewHolder> {
-    private List<Category> mCategories;
+    private List<MainMenu> mCategories;
     private Context mContext;
     private String TAG = CategoryAdapter.class.getSimpleName();
 
     OnItemClickListener onItemClickListener;
 
-    public CategoryAdapter(Context pContext, List<Category> pCategories, OnItemClickListener pOnItemClickListener) {
+    public CategoryAdapter(Context pContext, List<MainMenu> pCategories, OnItemClickListener pOnItemClickListener) {
         mContext = pContext;
         mCategories = pCategories;
         onItemClickListener = pOnItemClickListener;
@@ -40,7 +40,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.TableV
 
     @Override
     public void onBindViewHolder(TableViewHolder tableViewHolder, final int i) {
-        Category category = mCategories.get(i);
+        MainMenu category = mCategories.get(i);
         Log.d(TAG, "category name" + category.getCatName());
         tableViewHolder.textView.setText(category.getCatName());
 
